@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "0a21656a-4cac-44b1-ad5b-23641fccf691",
+		"name": "Todo API → Add task, See tasks, Update task, Delete task",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48647763",
+		"_collection_link": "https://anirudhkapnadak45-7013484.postman.co/workspace/Anirudh-Kapnadak's-Workspace~4d5e72dc-1a9a-4728-84b6-db1ea95859a3/collection/48647763-0a21656a-4cac-44b1-ad5b-23641fccf691?action=share&source=collection_link&creator=48647763"
+	},
+	"item": [
+		{
+			"name": "Post/ todos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnaW9leWd2dHVucmJ5cXFldnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTAxODAsImV4cCI6MjA3NDAyNjE4MH0.1QMlQ4uHU73KTt07yn0st94YDh4P34znD-pNppo6KYU",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnaW9leWd2dHVucmJ5cXFldnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTAxODAsImV4cCI6MjA3NDAyNjE4MH0.1QMlQ4uHU73KTt07yn0st94YDh4P34znD-pNppo6KYU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"task\": \"Learn APIs\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bgioeygvtunrbyqqevzg.supabase.co/rest/v1/todos",
+					"protocol": "https",
+					"host": [
+						"bgioeygvtunrbyqqevzg",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get/ todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnaW9leWd2dHVucmJ5cXFldnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTAxODAsImV4cCI6MjA3NDAyNjE4MH0.1QMlQ4uHU73KTt07yn0st94YDh4P34znD-pNppo6KYU",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnaW9leWd2dHVucmJ5cXFldnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTAxODAsImV4cCI6MjA3NDAyNjE4MH0.1QMlQ4uHU73KTt07yn0st94YDh4P34znD-pNppo6KYU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"task\": \"Learn APIs\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bgioeygvtunrbyqqevzg.supabase.co/rest/v1/todos?select=*",
+					"protocol": "https",
+					"host": [
+						"bgioeygvtunrbyqqevzg",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"todos"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/todos",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnaW9leWd2dHVucmJ5cXFldnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTAxODAsImV4cCI6MjA3NDAyNjE4MH0.1QMlQ4uHU73KTt07yn0st94YDh4P34znD-pNppo6KYU",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnaW9leWd2dHVucmJ5cXFldnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTAxODAsImV4cCI6MjA3NDAyNjE4MH0.1QMlQ4uHU73KTt07yn0st94YDh4P34znD-pNppo6KYU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://bgioeygvtunrbyqqevzg.supabase.co/rest/v1/todos?id=eq.1",
+					"protocol": "https",
+					"host": [
+						"bgioeygvtunrbyqqevzg",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"todos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch/todos",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnaW9leWd2dHVucmJ5cXFldnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTAxODAsImV4cCI6MjA3NDAyNjE4MH0.1QMlQ4uHU73KTt07yn0st94YDh4P34znD-pNppo6KYU",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnaW9leWd2dHVucmJ5cXFldnpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTAxODAsImV4cCI6MjA3NDAyNjE4MH0.1QMlQ4uHU73KTt07yn0st94YDh4P34znD-pNppo6KYU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"done\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bgioeygvtunrbyqqevzg.supabase.co/rest/v1/todos?id=eq.1\n",
+					"protocol": "https",
+					"host": [
+						"bgioeygvtunrbyqqevzg",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"todos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "eq.1\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
