@@ -27,5 +27,9 @@ A simple Todo API built using **Postman** and **Supabase** to demonstrate CRUD o
   "status": "pending"
 
 }
-Added project documentation including features, tech stack, API endpoints, and example request for the Todo API.
+{
+  "task": "Prepare project report for client",
+  "status": "done"
 }
+
+
