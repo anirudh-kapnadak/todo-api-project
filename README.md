@@ -25,4 +25,7 @@ A simple Todo API built using **Postman** and **Supabase** to demonstrate CRUD o
 {
   "task": "Learn APIs",
   "status": "pending"
+
+}
+Added project documentation including features, tech stack, API endpoints, and example request for the Todo API.
 }
